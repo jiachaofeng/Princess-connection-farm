@@ -26,7 +26,10 @@ def runmain(address,account,password):
     a.init_home()#初始化，确保进入首页
     
 
-    a.goumaimana()
+    a.tansuo()#探索
+    a.dixiachengDuanya()#地下城，请把队伍列表里1队设置为打boss队，2队设置为aoe队
+    a.shouqurenwu()#收取任务
+    a.shouqu()#收取所有礼物
 
 
     a.change_acc()#退出当前账号，切换下一个
@@ -53,7 +56,7 @@ def connect():#连接adb与uiautomator
 
 def read():#读取账号
     account_dic = {}
-    with open('zhanghao.txt','r') as f:#注意！请把账号密码写在zhanghao.txt内
+    with open('zhanghao2.txt','r') as f:#注意！请把账号密码写在zhanghao2.txt内,不是zhanghao.txt!!!!!
         for i,line in enumerate(f):
             account,password = line.split('\t')[0:2]
             account_dic[account]=password.strip()
